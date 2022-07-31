@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CRUD</title>
+</head>
+<body>
+  <div class="crud">
+    <div class="head">
+      <h2>CRUDS</h2>
+      <p>create read update delete search</p>
+    </div>
+    <div class="inputs">
+      <input type="text" placeholder="title" id="text">
+      <div class="price">
+        <input type="number" placeholder="price" id="price">
+        <input type="number" placeholder="texes" id="texes">
+        <input type="number" placeholder="discount" id="discount">
+        <input type="number" placeholder="ads" id="ads">
+        <small id="total">324</small>
+      </div>
+      <input type="number" placeholder="count" id="count">
+      <input type="text" placeholder="category" id="category">
+      <button id="submit">Create</button>
+
+    </div>
+    <div class="outputs">
+      <div class="search">
+        <input type="text" placeholder="Search" id="search">
+        <div class="btnSearch">
+          <button id="title">Seach by title</button>
+          <button id="searchCategory">Search by category</button>
+        </div>
+      </div>
+      <table>
+          <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+          </tr>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Infinix</td>
+              <td>892</td>
+              <td>176</td>
+              <td>100</td>
+              <td>100</td>
+              <td>135</td>
+              <td>Phones</td>
+              <td><button id="update">Update</button></td>
+              <td><button id="delete">Delete</button></td>
+            </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Iphone</td>
+            <td>2000</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>Phones</td>
+            <td><button id="update">Update</button></td>
+            <td><button id="delete">Delete</button></td>
+          </tr>
+      </tbody>
+      </table>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
