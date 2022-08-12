@@ -7,7 +7,7 @@ const ads = document.querySelector('#ads');
 const total = document.querySelector('#total');
 const count = document.querySelector('#count');
 const category = document.querySelector('#category');
-const btnCreate = document.querySelector('#submit'); 
+const btnCreate = document.querySelector('#submit');
 
 
 // calculate total of a product
@@ -29,7 +29,7 @@ function getTotal(){
 }
 
 function getFromLocalStorage(){
-    
+
     const products = JSON.parse(localStorage.getItem('Products')) || [];
     return products;
 }
@@ -37,7 +37,7 @@ function getFromLocalStorage(){
   const products = getFromLocalStorage();
 // create a product
 function createProduct(product){
-    
+
     products.push(product);
 
     localStorage.setItem('Products', JSON.stringify(products));
@@ -53,9 +53,10 @@ btnCreate.addEventListener('click', () =>{
   const adsValue = ads.value;
   const countValue = count.value;
   const ctegoryValue = category.value;
-
+  console.log(countValue);
   if(titleValue != '' || isNaN(titleValue) && priceValue != '' || isNaN(priceValue) && taxesValue != '' || isNaN(taxesValue) && discountValue != '' || isNaN(discountValue)
   && adsValue != '' || isNaN(adsValue) && countValue != '' || isNaN(countValue) && ctegoryValue != '' || isNaN(ctegoryValue)){
+    for(let i = 0; i < countValue; i++){
 
       const newProduct = {
           title : titleValue,
@@ -65,11 +66,23 @@ btnCreate.addEventListener('click', () =>{
           ads : adsValue,
           category : ctegoryValue
       }
-
-      createProduct(newProduct);
+      createProduct(newProduct);}
+      CleanInput();
   }
 })
 
+
+// clear Input fields
+function CleanInput(){
+  title.value = '';
+  price.value = '';
+  taxes.value = '';
+  discount.value = '';
+  ads.value = '';
+  count.value = '';
+  category.value = '';
+  total.innerHTML = '';
+}
 
 // get total
 // create product
