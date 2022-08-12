@@ -11,6 +11,10 @@ body{
   font-family: system-ui;
 }
 
+img{
+  border-radius: 50%;
+}
+
 .crud{
   margin: auto;
   width:80%;
@@ -53,7 +57,7 @@ input:focus{
   padding: 5px 4px;
 }
 #total::before{
-  content: 'total:';
+  content: 'total :';
 }
 
 button{
@@ -91,4 +95,13 @@ table th{
 }
 th, td{
   padding: 3px;
+}
+
+.bootom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  color: black;
+  font-weight: bold;
 }

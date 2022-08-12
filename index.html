@@ -10,43 +10,44 @@
 <body>
   <div class="crud">
     <div class="head">
-      <h2>CRUDS</h2>
-      <p>create read update delete search</p>
+      <img src="./aman.webp" alt="">
+      <h2>AMAN-CRUDS</h2>
+      <p>Generer vos produits</p>
     </div>
     <div class="inputs">
-      <input type="text" placeholder="title" id="title">
+      <input type="text" placeholder="nom_de_produit" id="title">
       <div class="price">
-        <input type="number"  onkeyup="getTotal()" placeholder="price" id="price">
+        <input type="number"  onkeyup="getTotal()" placeholder="prix" id="price">
         <input type="number" onkeyup="getTotal()" placeholder="taxes" id="taxes">
-        <input type="number"  onkeyup="getTotal()" placeholder="discount" id="discount">
+        <input type="number"  onkeyup="getTotal()" placeholder="reduction" id="discount">
         <input type="number" onkeyup="getTotal()" placeholder="ads" id="ads">
-        <small id="total">324</small>
+        <small id="total"></small>
       </div>
-      <input type="number" placeholder="count" id="count">
-      <input type="text" placeholder="category" id="category">
-      <button id="submit">Create</button>
+      <input type="number" placeholder="Quantite_de_produit" id="count">
+      <input type="text" placeholder="categorie" id="category">
+      <button id="submit">Creer</button>
 
     </div>
     <div class="outputs">
       <div class="search">
-        <input type="text" placeholder="Search" id="search">
+        <input type="text" placeholder="chercher un produit" id="search">
         <div class="btnSearch">
-          <button id="Producttitle">Seach by title</button>
-          <button id="searchCategory">Search by category</button>
+          <button id="Producttitle">Chercher avec le nom</button>
+          <button id="searchCategory">Chercher avec la categorie</button>
         </div>
       </div>
       <table>
           <tr>
               <th>id</th>
-              <th>title</th>
-              <th>price</th>
+              <th>Nom</th>
+              <th>Prix</th>
               <th>taxes</th>
               <th>ads</th>
-              <th>discount</th>
+              <th>reduction</th>
               <th>total</th>
-              <th>category</th>
-              <th>update</th>
-              <th>delete</th>
+              <th>categorie</th>
+              <th>Modifier</th>
+              <th>Supprimer</th>
           </tr>
 
           <tbody>
@@ -63,24 +64,15 @@
               <td><button id="delete">Delete</button></td>
             </tr>
         </tbody>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Iphone</td>
-            <td>2000</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-            <td>100</td>
-            <td>Phones</td>
-            <td><button id="update">Update</button></td>
-            <td><button id="delete">Delete</button></td>
-          </tr>
-      </tbody>
       </table>
     </div>
 
   </div>
+  <footer>
+    <div class="bootom">
+      <p>Copyright © 2022 - All Rights Reserved - AMAN</p>
+    </div>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
