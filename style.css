@@ -106,4 +106,13 @@ th, td{
   margin: 10px 0;
   color: black;
   font-weight: bold;
+  position: relative;
+}
+
+.foot-img{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
 }
